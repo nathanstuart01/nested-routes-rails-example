@@ -1,0 +1,16 @@
+<%= form_for [@school, @course] do |f| %> #only difference in nested routes when creating forms in nested views
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :code %>
+<%= f.text_field :code %>
+
+<%= f.label :num_students %>
+<%= f.number_field :num_students %>
+
+<%= f.label :active %>
+<%= f.select :active, [['Yes', true], ['No', false]] %>
+
+<%= f.submit %>
+<% end %>
